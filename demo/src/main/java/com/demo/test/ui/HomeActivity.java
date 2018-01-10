@@ -173,6 +173,7 @@ public class HomeActivity extends BaseActivity implements ImageMoving.ImageMovin
             adapter.setListener(this);
             rvCountSwitch.setAdapter(adapter);
         }else{
+            adapter.setSuccess(false);
             adapter.setBitmaps(imagePieces);
             adapter.setRow(row);
             adapter.setColumn(column);
