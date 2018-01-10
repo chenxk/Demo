@@ -50,10 +50,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/operationBarHeight"
+>
 
-        android:weightSum="3">
-
-        <LinearLayout
+       <!-- <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -107,7 +106,7 @@
 
         </LinearLayout>
 
-
+-->
 
 
 
@@ -125,8 +124,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:visibility="invisible">
+            android:layout_weight="1">
 
 
 

@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class ImageMoving {
 
+
+
     // 行
     private int row;
     // 列
@@ -97,7 +99,7 @@ public class ImageMoving {
      */
     public void chooseOnePiece(List<ImagePiece> pieces, int index){
         choosedPiece = pieces.get(index);
-        //choosedPiece = pieces.remove(index);
+        choosedPiece = pieces.remove(index);
         choosedPiece.setRow(row - 1);
         choosedPiece.setColumn(column - 1);
         choosedPiece.setIndex(row * column - 1);
@@ -132,9 +134,9 @@ public class ImageMoving {
             }
         }
 
-        System.out.println("coverPairCount:" + coverPairCount);
+        Log.i("coverPairCount", coverPairCount + "");
 
-        return (coverPairCount&1) == 0;
+        return (coverPairCount & 1) == 0;
     }
 
     /**
@@ -155,8 +157,6 @@ public class ImageMoving {
             this.dim2Pieces[j][k] = piece;
         }
 
-        //pieces.add(choosedPiece);
-        //dim2Pieces[row - 1][column - 1] = choosedPiece;
 
         boolean isOk = inverseNums();
         if(!isOk){
@@ -169,6 +169,9 @@ public class ImageMoving {
             swapPiece(piece1,piece2);
 
         }
+
+        pieces.add(choosedPiece);
+        dim2Pieces[row - 1][column - 1] = choosedPiece;
     }
 
 
